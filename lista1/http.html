@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Autor: Nome do Aluno | Turma: ADS | Data: 07/10/2026 -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>HTTP na prática</title>
+</head>
+<body>
+  <div>
+    <a href="index.html">Início</a> |
+    <a href="historia_web.html">História da Web</a> |
+    <a href="http.html">HTTP</a> |
+    <a href="#estados">Estados</a> |
+    <a href="curriculo.html">Currículo</a> |
+    <a href="contato.html">Contato</a>
+  </div>
+  <hr>
+
+  <h1>HTTP na prática: requisição e resposta</h1>
+
+  <h2>O papel do HTTP</h2>
+  <p>HTTP (<em>HyperText Transfer Protocol</em>) é o protocolo que define como o navegador pede páginas e outros recursos a um servidor web, e como o servidor responde.</p>
+
+  <h2>Cliente, servidor, requisição e resposta</h2>
+  <ul>
+    <li><strong>Cliente:</strong> quem faz o pedido (normalmente o navegador).</li>
+    <li><strong>Servidor:</strong> quem guarda os recursos e responde.</li>
+    <li><strong>Requisição:</strong> a mensagem enviada pelo cliente.</li>
+    <li><strong>Resposta:</strong> a mensagem devolvida pelo servidor.</li>
+  </ul>
+
+  <h2>Métodos GET e POST</h2>
+  <ul>
+    <li><strong>GET:</strong> pede um recurso; os parâmetros vão na URL e o método não deve alterar dados no servidor.</li>
+    <li><strong>POST:</strong> envia dados no corpo da requisição (ex.: formulários, cadastros).</li>
+  </ul>
+
+  <h2>Exemplo de requisição</h2>
+  <pre>GET /index.html HTTP/1.1
+Host: www.exemplo.com.br
+User-Agent: Mozilla/5.0
+Accept: text/html</pre>
+
+  <h2>Exemplo de resposta</h2>
+  <pre>HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1256
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt; ... &lt;/html&gt;</pre>
+
+  <h2 id="estados">Códigos de status (estados) HTTP</h2>
+  <table border="1">
+    <thead>
+      <tr><th>Código</th><th>Nome</th><th>Significado</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>200</td><td>OK</td><td>Requisição bem-sucedida.</td></tr>
+      <tr><td>301</td><td>Moved Permanently</td><td>Recurso mudou de endereço definitivamente.</td></tr>
+      <tr><td>400</td><td>Bad Request</td><td>Requisição malformada ou inválida.</td></tr>
+      <tr><td>403</td><td>Forbidden</td><td>Acesso proibido, mesmo que o recurso exista.</td></tr>
+      <tr><td>404</td><td>Not Found</td><td>Recurso não encontrado.</td></tr>
+      <tr><td>500</td><td>Internal Server Error</td><td>Erro interno no servidor.</td></tr>
+    </tbody>
+  </table>
+  <hr>
+  <p><a href="index.html">Voltar ao início</a></p>
+</body>
+</html>

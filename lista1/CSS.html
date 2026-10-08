@@ -5,23 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /** Regra CSS*/
+        *{
+            border: 1px solid #101010;
+        }
         p{
-            font-size: 20pt;
-             
-        };
+            font-size: 20px;   
+            color: #404e18;
+            background-color: #404e186b;
 
+        }
+        h1{
+            font-size: 4em;
+        }
+        #itemID{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        .item{
+            background-color: #7b8b4f9c;
+        }
 
+        div span{
+            font-style: italic;
+        }
+        div>mark{
+            background-color: blue;
+        }
+        li:hover{
+            color: rgb(216, 23, 23);
+        }
+        
+        
     </style>
 </head>
 <body>
     <h1>CSS</h1>
     <p>Css é uma linguagem declarativa auxiliar de documentos html para estelização de definicção de comportamentos. O Css pode ser declaradp de três formas distintas.</p>
+    
     <ol>
-        <li>N tag style, definido mp cabeçário do HTML;</li>
+        <li class="item">N tag style, definido mp cabeçário do HTML;</li>
         <li>Em um documento externo por meio de tag link;</li>
         <li>Inline no próprio elemento HTML.</li>
     </ol>
-
-
+    <div>
+        <p>CSS possii diversas formas de selecionar quais elementos html uma regra será aplicado. </p>
+        <span>Seletores</span>
+        <ul><li class="intem">seletor universal</li>
+        <li class="item">* seletor universal</li>
+        <li id="intemId">#id identificador unico</li>
+        <li>.classe ou categoria</li>
+        <li>seletor por descendente  " " <span>A</span></li>
+        </ul>
+        <mark>B</mark>
+    </div>
+    
 </body>
 </html>
